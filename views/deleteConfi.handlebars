@@ -1,0 +1,7 @@
+<div class="container">
+    {{#each user}}
+    <h1>Deseas eliminar a "{{this.usuario}}"?</h1>
+    {{/each}}
+    <a href="?deleteNow=1" class="btn btn-danger">Confirmar</a>
+    <a href="/" class="btn btn-secondary">Volver</a>
+</div>
