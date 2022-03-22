@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const front = require("./routes/front");
 const api = require("./routes/api");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.engine("handlebars", engine());

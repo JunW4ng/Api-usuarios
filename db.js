@@ -1,7 +1,8 @@
 const { Pool } = require("pg");
+
 const pool = new Pool({
-  connectionString:
-    "postgresql://postgres:Junjie1995@localhost:5432/users_list",
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
 
 const getUsers = async () => {
